@@ -1,0 +1,25 @@
+{
+  "name": "hosts",
+  "version": "1.0.0",
+  "description": "基于nodejs修改hosts文件的命令行工具",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "got": "^11.8.2"
+  },
+  "bin": {
+    "hosts": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wmz46/hosts.git"
+  },
+  "author": "wangmianzhe",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/wmz46/hosts/issues"
+  },
+  "homepage": "https://github.com/wmz46/hosts#readme"
+}
