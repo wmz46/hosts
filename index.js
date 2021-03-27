@@ -34,9 +34,9 @@ if (arguments != '') {
             arr.push('[-h] [-p] [-r domain] [-u domain] [-u domain ip]')
             arr.push('-h            帮助')
             arr.push('-p            打印hosts')
-            arr.push('-r domain     移除指定domain的记录')
-            arr.push('-u domain     更新指定domain的记录，ip从ipaddress.com自动获取')
-            arr.push('-u domain ip  更新指定domain的记录，ip自定义')
+            arr.push('-r domain     移除指定domain的记录,需要管理员身份运行')
+            arr.push('-u domain     更新指定domain的记录，ip从ipaddress.com自动获取,需要管理员身份运行')
+            arr.push('-u domain ip  更新指定domain的记录，ip自定义,需要管理员身份运行')
             console.log(arr.join('\r\n'))
             break;
         }

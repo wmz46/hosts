@@ -20,13 +20,13 @@ hosts -p
 #帮助
 hosts -h
 
-#移除指定domain的记录
+#移除指定domain的记录,需要管理员身份运行
 hosts -r github.com
 
-#更新指定domain的记录，ip从ipaddress.com自动获取
+#更新指定domain的记录，ip从ipaddress.com自动获取,需要管理员身份运行
 hosts -u github.com
 
-#更新指定domain的记录，ip自定义
+#更新指定domain的记录，ip自定义,需要管理员身份运行
 hosts -u github.com 140.82.114.4
 
 
