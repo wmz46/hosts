@@ -11,17 +11,23 @@ cnpm install wmz46/hosts#main -g
 npm uninstall hosts -g
 ## 三、使用
 ```shell
+
 #打印hosts
+hosts
+#或
 hosts -p
 
+#帮助
+hosts -h
+
 #移除指定domain的记录
-lsport -r github.com
+hosts -r github.com
 
 #更新指定domain的记录，ip从ipaddress.com自动获取
-lsport -u github.com
+hosts -u github.com
 
 #更新指定domain的记录，ip自定义
-lsport -u github.com 140.82.114.4
+hosts -u github.com 140.82.114.4
 
 
 ```
