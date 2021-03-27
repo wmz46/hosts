@@ -1,5 +1,8 @@
 const got = require('got');
 var fs = require('fs');
+const {
+    cmd
+} = require('./cmd/index')
 
 const hostsPath = process.env.windir + "\\system32\\drivers\\etc\\hosts";
 var printHosts = function () {
@@ -43,6 +46,8 @@ var removeHosts = function (domain) {
         }
         var newTxt = newLines.join("\r\n");
         fs.writeFileSync(hostsPath, newTxt);
+        //刷新dns
+        await cmd('ipconfig /flushdns');
         resolve(newTxt);
     })
 }
@@ -71,6 +76,8 @@ var updateHosts = function (domain, ip) {
         }
         var newTxt = newLines.join("\r\n");
         fs.writeFileSync(hostsPath, newTxt);
+        //刷新dns
+        await cmd('ipconfig /flushdns');
         resolve(newTxt);
 
     })

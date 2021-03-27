@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "got": "^11.8.2"
+    "got": "^11.8.2",
+    "iconv-lite": "^0.6.2"
   },
   "bin": {
     "hosts": "./index.js"
