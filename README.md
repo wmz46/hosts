@@ -2,7 +2,7 @@
 基于nodejs修改hosts文件的命令行工具
 ## 一、安装
 ```shell
-npm install wmz46/hosts -g
+npm install wmz46/hosts#main -g
 #或者
 cnpm install wmz46/hosts#main -g
 
