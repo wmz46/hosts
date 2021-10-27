@@ -18,9 +18,9 @@ var getIp = function (domain) {
             method: 'GET'
         }).then(function (response) {
             var html = response.body //返回数据
-            var match = html.match("\\d+\\.\\d+\\.\\d+\\.\\d+");
+            var match = html.match(`<ul class="comma-separated"><li>(\\d+\\.\\d+\\.\\d+\\.\\d+)</li></ul>`);
             if (match) {
-                var ip = match[0];
+                var ip = match[1];
                 resolve(ip);
             } else {
                 reject();
