@@ -13,12 +13,13 @@ var printHosts = function () {
 }
 var getIp = function (domain) {
     return new Promise(function (resolve, reject) {
-        var url = "https://" + domain + ".ipaddress.com/";
+        var url = "https://sites.ipaddress.com/"+domain+"/"
         got(url, {
             method: 'GET'
         }).then(function (response) {
             var html = response.body //返回数据
-            var match = html.match(`<ul class="comma-separated"><li>(\\d+\\.\\d+\\.\\d+\\.\\d+)</li></ul>`);
+           
+            var match = html.match( `<a href="https://www.ipaddress.com/ipv4/(\\d+\\.\\d+\\.\\d+\\.\\d+)">`);
             if (match) {
                 var ip = match[1];
                 resolve(ip);
